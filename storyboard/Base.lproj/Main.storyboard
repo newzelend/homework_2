@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l0O-ES-hRt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V0c-BM-Ayz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -61,6 +61,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FUk-fJ-HdL">
+            <objects>
+                <navigationController id="V0c-BM-Ayz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kjp-Iz-TnN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rVQ-Cr-kfD" kind="relationship" relationship="rootViewController" id="yIt-w6-nTN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BB-Gg-0Xv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1536" y="996"/>
+        </scene>
+        <!--select_page_ViewController-->
+        <scene sceneID="nnD-DO-8y3">
+            <objects>
+                <viewController storyboardIdentifier="select_page_ViewController" title="select_page_ViewController" id="rVQ-Cr-kfD" customClass="select_page_ViewController" customModule="vk_server" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3U-5I-Xn0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-Gc-ipR">
+                                <rect key="frame" x="100" y="314" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="actions 1"/>
+                                <connections>
+                                    <action selector="actionsNewsFeed:" destination="rVQ-Cr-kfD" eventType="touchUpInside" id="895-4Z-79a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Y-5Q-IMi">
+                                <rect key="frame" x="100" y="405" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="actions 2"/>
+                                <connections>
+                                    <action selector="actionTest:" destination="rVQ-Cr-kfD" eventType="touchUpInside" id="wL4-iw-plf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmO-Tl-bND">
+                                <rect key="frame" x="100" y="496" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="actions 3"/>
+                                <connections>
+                                    <action selector="frendsViewActions:" destination="rVQ-Cr-kfD" eventType="touchUpInside" id="fvf-Wj-zGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="173-BQ-pEL">
+                                <rect key="frame" x="100" y="587" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="actions 4"/>
+                                <connections>
+                                    <action selector="actionGroupsPromise:" destination="rVQ-Cr-kfD" eventType="touchUpInside" id="0zG-r5-naM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dj3-gu-AJH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a0Y-5Q-IMi" firstAttribute="leading" secondItem="dj3-gu-AJH" secondAttribute="leading" constant="100" id="Aas-IM-Kbi"/>
+                            <constraint firstItem="LmO-Tl-bND" firstAttribute="leading" secondItem="dj3-gu-AJH" secondAttribute="leading" constant="100" id="F3H-my-AId"/>
+                            <constraint firstItem="dj3-gu-AJH" firstAttribute="trailing" secondItem="Bbl-Gc-ipR" secondAttribute="trailing" constant="100" id="GXL-yD-8aq"/>
+                            <constraint firstItem="LmO-Tl-bND" firstAttribute="top" secondItem="a0Y-5Q-IMi" secondAttribute="bottom" constant="60" id="Iwg-m4-rVd"/>
+                            <constraint firstItem="173-BQ-pEL" firstAttribute="top" secondItem="LmO-Tl-bND" secondAttribute="bottom" constant="60" id="Oi4-vC-WWu"/>
+                            <constraint firstItem="Bbl-Gc-ipR" firstAttribute="leading" secondItem="dj3-gu-AJH" secondAttribute="leading" constant="100" id="TV6-KJ-Q2m"/>
+                            <constraint firstItem="173-BQ-pEL" firstAttribute="leading" secondItem="dj3-gu-AJH" secondAttribute="leading" constant="100" id="eNp-x0-vyE"/>
+                            <constraint firstItem="a0Y-5Q-IMi" firstAttribute="top" secondItem="Bbl-Gc-ipR" secondAttribute="bottom" constant="60" id="fBe-Ys-X3T"/>
+                            <constraint firstItem="dj3-gu-AJH" firstAttribute="trailing" secondItem="173-BQ-pEL" secondAttribute="trailing" constant="100" id="k21-U9-rHz"/>
+                            <constraint firstItem="dj3-gu-AJH" firstAttribute="trailing" secondItem="LmO-Tl-bND" secondAttribute="trailing" constant="100" id="lrd-AJ-z5L"/>
+                            <constraint firstItem="dj3-gu-AJH" firstAttribute="trailing" secondItem="a0Y-5Q-IMi" secondAttribute="trailing" constant="100" id="tF9-KI-RTT"/>
+                            <constraint firstItem="Bbl-Gc-ipR" firstAttribute="top" secondItem="dj3-gu-AJH" secondAttribute="top" constant="226" id="tO6-jz-PPK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wsb-Xc-3xJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwT-oy-1IJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="1005"/>
         </scene>
         <!--Item-->
         <scene sceneID="IIp-Q9-PGh">
