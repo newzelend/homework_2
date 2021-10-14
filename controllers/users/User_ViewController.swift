@@ -12,7 +12,7 @@ import AlamofireImage
 
 class User_ViewController: UIViewController {
 
-    @IBOutlet weak var userImage: custom!
+    @IBOutlet weak var userName: custom!
     @IBOutlet weak var userName: UILabel!
     
     override func viewDidLoad() {
